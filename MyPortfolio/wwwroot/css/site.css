@@ -1,0 +1,155 @@
+body {
+    background-color: #ff69b4; /* Bright Pink */
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.btn-dark-pink {
+    background-color: #d63384; /* Dark Pink */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+    .btn-dark-pink:hover {
+        background-color: #ff1493; /* Brighter Pink on Hover */
+    }
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.code-editor {
+    background-color: #1e1e1e; /* Visual Studio dark theme */
+    color: #dcdcdc;
+    font-family: 'Consolas', 'Courier New', monospace;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+    white-space: pre-wrap;
+}
+
+.keyword {
+    color: #569cd6;
+}
+
+.string {
+    color: #d69d85;
+}
+
+.comment {
+    color: #6a9955;
+    font-style: italic;
+}
+
+.section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+    .section:hover {
+        transform: scale(1.02);
+    }
+
+    .section h2 {
+        color: #d63384; /* Dark pink */
+        font-size: 24px;
+    }
+
+.toggle-btn {
+    background-color: #ff69b4; /* Bright pink */
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+    .toggle-btn:hover {
+        background-color: #d63384; /* Dark pink */
+    }
+
+.content {
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+    .content.show {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+.card {
+    background: #fce4ec;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+    .card h3 {
+        margin: 0;
+        color: #d63384;
+    }
+
+    .card p {
+        margin: 5px 0;
+    }
+

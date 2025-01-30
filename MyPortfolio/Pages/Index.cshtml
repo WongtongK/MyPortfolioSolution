@@ -1,0 +1,81 @@
+﻿@page
+@model IndexModel
+
+@{
+    ViewData["Title"] = "Karina's Portfolio";
+}
+
+<div class="container">
+    <img src="/images/portfolio-billede.jpg" alt="Karina's Picture" width="250" height="200" style="border-radius: 50%;">
+    
+    <h1>Hello, my name is Karina</h1>
+
+    <div class="code-editor">
+        <span class="comment">// Meet Karina</span><br>
+        <span class="keyword">class</span> <span class="keyword">Developer</span> {<br>
+        &nbsp;&nbsp;<span class="keyword">public string</span> Name = <span class="string">"Karina Kristensen"</span>;<br>
+        &nbsp;&nbsp;<span class="keyword">public string[]</span> Qualities = { <span class="string">"Creative"</span>, <span class="string">"Problem Solver"</span>, <span class="string">"Passionate"</span> };<br>
+        &nbsp;&nbsp;<span class="keyword">public void</span> BuildAwesomeProjects() {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">// Coding in progress...</span><br>
+        &nbsp;&nbsp;}<br>
+        }
+    </div>
+
+    <a href="#about" class="btn-dark-pink">Learn More</a>
+</div>
+
+<section id="about" class="container">
+    <h2>About Me</h2>
+    <p>I am a software developer with experience in ASP.NET, C#, SQL, SCRUM and front-end technologies. My passion is Cyber Security and Software Development.
+    </p>
+</section>
+
+<section id="education" class="section">
+    <h2>Education & Experience</h2>
+    <button class="toggle-btn" onclick="toggleSection('eduContent')">View Details</button>
+    <div id="eduContent" class="content">
+        <div class="card">
+            <h3>AP Degree in Computer Science</h3>
+            <p>UCL akademi- & professionshøjskole, 2026</p>
+        </div>
+        <div class="card">
+            <h3>Hackerdag for begyndere</h3>
+            <p>Aarhus Universitet, 2025</p>
+        </div>
+        <div class="card">
+            <h3>High school</h3>
+            <p>Rosborg HF & Gymnasium, 2022</p>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="section">
+    <h2>Projects & Skills</h2>
+    <button class="toggle-btn" onclick="toggleSection('projContent')">View Details</button>
+    <div id="projContent" class="content">
+        <div class="card">
+            <h3>Portfolio Website</h3>
+            <p>ASP.NET Core, JavaScript, HTML</p>
+        </div>
+        <div class="card">
+            <h3>ToDo List App</h3>
+            <p>ASP.NET Core, razor</p>
+        </div>
+    </div>
+</section>
+
+<script>
+    function toggleSection(id) {
+        var section = document.getElementById(id);
+        section.style.display = section.style.display === "none" ? "block" : "none";
+    }
+</script>
+
+<footer class="text-center mt-5">
+    <p>Email: karinakristensen2@gmail.com</p>
+    <p>Phone: +45 51718327</p>
+    <p>
+        <a href="https://www.linkedin.com/in/karina-kristensen-41a724306/" target="_blank">LinkedIn</a> | 
+        <a href="https://github.com/WongtongK" target="_blank">GitHub</a>
+    </p>
+</footer>
