@@ -1,4 +1,12 @@
-﻿body {
+﻿article {width: 50%;}
+@media only screen and (max-width: 600px) {
+    article {width: 200px;}
+}
+@media only screen and (min-width: 1200px) {
+    article {width: 800px;}
+}
+
+body {
     background-color: #ff69b4; /* Bright Pink */
     color: white;
     font-family: Arial, sans-serif;
