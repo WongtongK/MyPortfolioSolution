@@ -1,4 +1,4 @@
-body {
+﻿body {
     background-color: #ff69b4; /* Bright Pink */
     color: white;
     font-family: Arial, sans-serif;
@@ -137,12 +137,19 @@ body {
     }
 
 .card {
-    background: #fce4ec;
+    background-color: white;
+    color: #333;
     padding: 15px;
+    border-radius: 12px;
     margin: 10px 0;
-    border-radius: 10px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(255, 20, 147, 0.6);
+    }
 
     .card h3 {
         margin: 0;
@@ -151,5 +158,99 @@ body {
 
     .card p {
         margin: 5px 0;
+    }
+
+.qualities {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #ff69b4; /* Bright pink */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 20, 147, 0.6);
+    color: white;
+}
+
+.qualities h3 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.qualities-list {
+    list-style: none;
+    padding: 0;
+}
+
+    .qualities-list li {
+        font-size: 1.2rem;
+        margin: 5px 0;
+        transition: transform 0.3s ease-in-out;
+    }
+
+        .qualities-list li:hover {
+            transform: scale(1.1);
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+
+/* ✨ "Hello, my name is Karina" Hover Effect */
+.intro-box {
+    background-color: #ff69b4; /* Bright pink */
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+    .intro-box:hover {
+        transform: scale(1.05); /* Slightly grow on hover */
+        box-shadow: 0 0 15px rgba(255, 105, 180, 0.6); /* Glowing pink shadow */
+    }
+
+/* ✨ About Me - Cool Styling */
+.about-heading {
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-align: center;
+    color: white; /* Ensures visibility */
+    background: linear-gradient(90deg, #ff1493, #ff69b4, #ff1493);
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.8);
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Glowing effect */
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px rgba(255, 20, 147, 0.6);
+    }
+
+    to {
+        text-shadow: 0 0 20px rgba(255, 105, 180, 0.9);
+    }
+}
+
+/* ✨ About Me - Cool Subtext */
+.about-text {
+    font-size: 1.2rem;
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px auto;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(255, 20, 147, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+    .about-text:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgba(255, 20, 147, 0.8);
     }
 
