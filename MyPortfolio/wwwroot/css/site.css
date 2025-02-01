@@ -69,6 +69,29 @@ body {
     }
 }
 
+.portfolio-img {
+    display: block;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 50%;
+    opacity: 0;
+    animation: fadeInTop 1.5s ease-in-out forwards;
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes fadeInTop {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .code-editor {
     background-color: #1e1e1e; /* Visual Studio dark theme */
     color: #dcdcdc;
@@ -200,20 +223,40 @@ body {
             text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
         }
 
-/* ✨ "Hello, my name is Karina" Hover Effect */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
 .intro-box {
     background-color: #ff69b4; /* Bright pink */
     color: white;
-    padding: 20px;
-    border-radius: 12px;
+    padding: 30px;
+    border-radius: 15px;
     text-align: center;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    font-family: 'Roboto', sans-serif; /* Modern font */
+    font-weight: 500;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Light shadow for text */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background-color 0.3s ease;
 }
 
-    .intro-box:hover {
-        transform: scale(1.05); /* Slightly grow on hover */
-        box-shadow: 0 0 15px rgba(255, 105, 180, 0.6); /* Glowing pink shadow */
+/* Adding a cool animation for text */
+@keyframes textGlow {
+    0% {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 0 0 10px #ff69b4, 0 0 20px #ff69b4;
     }
+
+    50% {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 0 0 20px #ff1493, 0 0 30px #ff1493;
+    }
+
+    100% {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 0 0 10px #ff69b4, 0 0 20px #ff69b4;
+    }
+}
+
+/* Apply the animation to the text */
+.intro-box h2 {
+    animation: textGlow 3s ease-in-out infinite; /* Glowing text animation */
+    font-size: 2rem;
+}
 
 /* ✨ About Me - Cool Styling */
 .about-heading {
@@ -257,8 +300,39 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
-    .about-text:hover {
-        transform: scale(1.05);
-        box-shadow: 0 0 15px rgba(255, 20, 147, 0.8);
-    }
+        /* ✨ Hover Effect - Words Change Color & Move */
+        .about-text span:hover {
+            color: #ff1493;
+            transform: scale(1.2);
+            text-shadow: 0 0 10px rgba(255, 20, 147, 0.6);
+        }
 
+/* ✨ Keyframe Animations */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ✨ Logo Section Styling */
+.logos-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Space between logos */
+    padding: 20px 0;
+}
+
+/* ✨ Logo Styling */
+.logo {
+    width: 80px; /* Adjust size as needed */
+    height: auto;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+    /* ✨ Hover Effect */
+    .logo:hover {
+        transform: scale(1.2);
+        filter: drop-shadow(0 0 10px rgba(255, 20, 147, 0.6)); /* Pink glow */
+    }
